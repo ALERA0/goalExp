@@ -43,7 +43,7 @@ const Intro = () => {
             <p className="text-blue-950 font-semibold mt-1">Metal Filter</p>
             <div className="relative h-5 ">
               <progress
-                class="progress progress-accent h-full "
+                className="progress progress-accent h-full "
                 value="35"
                 max="100"
               ></progress>
