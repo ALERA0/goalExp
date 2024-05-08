@@ -7,7 +7,7 @@ const ImageWText = ({ src, orangeText, headingText, infoText1, infoText2 }) => {
       <div className="w-1/2">
         <Image
           src={src}
-          alt="feature2"
+          alt="feature"
           className="rounded-3xl aspect-square w-full  border-2"
           
         />
