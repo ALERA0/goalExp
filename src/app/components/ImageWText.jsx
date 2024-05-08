@@ -9,7 +9,6 @@ const ImageWText = ({ src, orangeText, headingText, infoText1, infoText2 }) => {
           src={src}
           alt="feature"
           className="rounded-3xl aspect-square w-full  border-2"
-          
         />
       </div>
       <div className="flex flex-col gap-4 pr-12">
