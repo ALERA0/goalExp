@@ -1,5 +1,5 @@
 import React from "react";
-import check from "../../../public/icons/check.png";
+import check from "../../public/icons/check.png";
 import Image from "next/image";
 
 const Paying = () => {

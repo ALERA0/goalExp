@@ -1,8 +1,8 @@
 import React from "react";
-import playStore from "../../../public/images/badge-app-store.webp";
-import appStore from "../../../public/images/badge-play-store.webp";
-import webApp from "../../../public/images/badge-web-app.webp";
-import fire from "../../../public/images/campfire.png";
+import playStore from "../../public/images/badge-app-store.webp";
+import appStore from "../../public/images/badge-play-store.webp";
+import webApp from "../../public/images/badge-web-app.webp";
+import fire from "../../public/images/campfire.png";
 import Image from "next/image";
 
 const Intro = () => {

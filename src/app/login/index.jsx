@@ -27,7 +27,7 @@ const LoginPage = () => {
             <input type="password" className="w-full py-3 px-2 !bg-white text-black rounded-xl shadow-md"  />
             <button className="text-center w-full text-sm bg-[#EA5234] mt-3 border-2 border-[#EA5234] rounded-lg py-3 text-white hover:bg-orange-700 duration-200 uppercase font-bold mb-4 ">Log in</button>
         </div>
-        <a href="/" className="link flex justify-center items-center  text-slate-700">Signup instead?</a>
+        <a href="/signup" className="link flex justify-center items-center  text-slate-700">Signup instead?</a>
         <div className="w-full bg-slate-300 h-0.5"/>
         <p className="flex justify-center items-center gap-1 text-black">Having issues?<a href="/" className="link ">Email us</a></p>
       </div>

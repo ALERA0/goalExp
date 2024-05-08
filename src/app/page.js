@@ -1,9 +1,9 @@
-import Header from "./components/Header";
-import Intro from "./components/Intro";
-import Exercising from "./components/Exercising";
-import Gamification from "./components/Gamification";
-import ImageTextGroup from "./components/ImageTextGroup";
-import Paying from "./components/Paying";
+import Header from "../components/Header";
+import Intro from "../components/Intro";
+import Exercising from "../components/Exercising";
+import Gamification from "../components/Gamification";
+import ImageTextGroup from "../components/ImageTextGroup";
+import Paying from "../components/Paying";
 
 export default function Home() {
   return (
