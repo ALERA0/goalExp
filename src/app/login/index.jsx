@@ -1,6 +1,7 @@
 import React from "react";
 import google from "../../../public/icons/search.png";
 import Image from "next/image";
+import AllAvatars from "@/components/AllAvatars";
 
 const LoginPage = () => {
   return (
@@ -8,7 +9,7 @@ const LoginPage = () => {
       <div className="max-w-xl mx-auto p-4 space-y-8 mb-24">
         <div className="flex justify-center">
           <div className="p-4 bg-white rounded-xl">
-            <div className="text-5xl">🚴</div>
+            <AllAvatars />
           </div>
         </div>
         <h1 className="text-4xl font-black tracking-tight text-center text-[#333C4D]">
@@ -20,7 +21,7 @@ const LoginPage = () => {
         </button>
         <div >
             <p className="font-semibold mb-1">Email</p>
-            <input type="email" className="w-full py-4 px-2 bg-white text-black rounded-xl shadow-md" placeholder="micheal@jackson.com" />
+            <input type="email" className="w-full py-4 px-2 bg-white text-black rounded-xl shadow-md" placeholder="micheal@jackson.com" autoComplete="email" />
         </div>
         <div >
             <p className="font-semibold mb-1">Password</p>
