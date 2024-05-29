@@ -5,13 +5,28 @@ import Avatar from "./Avatar";
 import Image from "next/image";
 import { avatars } from "@/avatars";
 import close from "../../public/icons/close.png";
-
+import { setAvatar, setGoal } from "@/redux/slice/select-avatar-goal-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 const CreateAvatar = () => {
   const [hide, setHide] = useState(true);
+  const dispatch = useDispatch();
+
+  const { avatar, goal } = useSelector((state) => state.setAvatarGoal);
+
+  const calculateXP = (goal) => {
+    if (!goal) return 0;
+    return Math.floor(100 / goal);
+  };
+
+  console.log(avatar,goal);
 
   return (
-    <div className={`bg-[#EFEFEF] h-screen overflow-y-auto ${hide ? "flex": "hidden"} z-20`}>
+    <div
+      className={`bg-[#EFEFEF] h-screen overflow-y-auto ${
+        hide ? "flex" : "hidden"
+      } z-20`}
+    >
       <div className="max-w-xl mx-auto p-4 space-y-8 mb-24">
         <div className="flex justify-between">
           <h1 className="text-3xl font-black tracking-tight  text-[#333C4D]">
@@ -26,8 +41,13 @@ const CreateAvatar = () => {
         </div>
         <form className="space-y-4">
           <div className="grid grid-rows-3 grid-flow-col gap-2 overflow-auto p-2 px-4 -mx-4 -m-2">
-            {avatars.map((avatar, index) => (
-              <Avatar key={index} icon={avatar} />
+            {avatars.map((avatars, index) => (
+              <Avatar
+                key={index}
+                icon={avatars}
+                isSelected={avatar === avatars}
+                onClick={() => dispatch(setAvatar(avatars))}
+              />
             ))}
           </div>
           <div>
@@ -46,15 +66,17 @@ const CreateAvatar = () => {
                   key={index}
                   text={`${index + 1}x`}
                   value={index + 1}
+                  isSelected={goal === index + 1}
+                  onClick={() => dispatch(setGoal(index + 1))}
                 />
               ))}
             </div>
             <p className="text-xs mt-3 text-black">
-              <span className="font-bold">25</span> XP per completion. Up to 100
-              XP a week
+              <span className="font-bold">{calculateXP(goal)}</span> XP per
+              completion. Up to 100 XP a week
             </p>
           </div>
-          <button className="text-center w-full text-sm bg-[#EA5234] mt-3 border-2 border-[#EA5234] rounded-lg py-3 text-white hover:bg-orange-700 duration-200 uppercase font-bold mb-4 ">
+          <button className="text-center w-full text-sm bg-[#EA5234] mt-3 border-2 border-[#EA5234] rounded-lg py-3 text-white hover:bg-orange-700 duration-200 uppercase font-bold mb-4">
             Create Avatar
           </button>
         </form>
